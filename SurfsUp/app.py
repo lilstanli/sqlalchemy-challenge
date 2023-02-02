@@ -34,10 +34,10 @@ def home():
     '''
     html+='''<ol style="text-decoration: none;font-family: system-ui; font-size: 1.4em; font-weight: lighter">'''
     for li in available_routes:
-        html+=f'''<li> <a style="text-decoration: none; color: #008ef6;" href="/api/v1.0/{li}">{li.title()} <span style="font-size: 0.7em">"/api/v1.0/{li}"</span></a>  </li>'''
+        html+=f'''<li> <a style="text-decoration: none; color: #008ef6;" target="_blank" href="/api/v1.0/{li}">{li.title()} <span style="font-size: 0.7em">"/api/v1.0/{li}"</span> &#x279a</a>  </li>'''
     html+="</ol>"
-    html+='''<a style="text-decoration: none; color: #008ef6; font-family: system-ui;" href="api/v1.0/2016-08-11">Sample start date : "2016-08-11"</a><br>
-    <a style="text-decoration: none; color: #008ef6; font-family: system-ui;" href="api/v1.0/2016-08-11/2017-01-01">Sample start - end date : "2016-08-11/2017-01-01"</a>'''
+    html+='''<a style="text-decoration: none; color: #008ef6; font-family: system-ui;" href="api/v1.0/2016-08-11">>> Sample start date : "2016-08-11"</a><br>
+    <a style="text-decoration: none; color: #008ef6; font-family: system-ui;" href="api/v1.0/2016-08-11/2017-01-01">>> Sample start - end date : "2016-08-11/2017-01-01"</a>'''
     html+="</main>"
 
     return html
@@ -149,4 +149,4 @@ def current_route(current_route):
     return html
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
